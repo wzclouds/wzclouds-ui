@@ -1,3 +1,5 @@
+# wzclouds-ui
+
 ## 1.0 版本介绍
 #### 主要用户会议管理系统后端通信及业务处理
 ***
@@ -140,11 +142,7 @@ echo '---信令服务器启动完毕---'
 
 ```
 
-## 服务地址 http://0.0.0.0:3000/
-
-作者 [@中科恒运][1]
-2019 年 08月 07日
-[1]: http://www.hengyunsoft.com/
+## 服务访问地址 https://192.168.1.124/wzclouds/meeting#/meetingvideo
 
 
 ## 2.0 版本介绍
@@ -187,4 +185,3 @@ st->isJoin->op->choose->meeting->meetingVideo->
 isJoin(yes)->meeting
 isJoin(no)->op
 ```
-# wzclouds-ui
