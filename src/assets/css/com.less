@@ -1,0 +1,393 @@
+@charset 'utf-8';
+@default: #e9eaec;
+@primary: #0099CC;
+@light-primary: #5cadff;
+@dark-primary: #2b85e4;
+@info: #0099CC;
+@success: #19be6b;
+@warning: #ff9900;
+@error: #ed3f14;
+@white: #ffffff;
+@black: #000000;
+html {
+    font-size: 12px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.clearfix {
+    width: 100%;
+    display: table;
+}
+
+html, body, #app, .ivu-layout {
+    min-height: 100%;
+    display: inherit;
+    min-width: 80%;
+    background-color: #f5f7f9;
+    .ivu-layout-header {
+        padding: 0 30px;
+        background: @primary;
+        .layout-logo {
+            img {
+                margin-top: 10px;
+                width: 160px;
+            }
+        }
+        .right-icon-box {
+            margin-top: 10px;
+            .icon-box {
+                float: left;
+                padding: 0 20px;
+                color: @white;
+                i {
+                    text-align: center;
+                    line-height: 30px;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 25px;
+                    font-size: 1.8rem;
+                    border: 2px solid @white;
+                    display: block;
+                    overflow: hidden;
+                }
+                i.icon-ren {
+                    line-height: 35px;
+                }
+                i.icon-index {
+                    line-height: 35px;
+                }
+                i.icon-xiaoxi {
+                    color: @primary;
+                    background: @white;
+                }
+                .text {
+                    width: 100%;
+                    text-align: center;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+    .ivu-layout-sider {
+        a {
+            color: inherit;
+        }
+        a.router-link-active {
+            color: @primary;
+            li {
+                border-right: 3px solid @primary;
+            }
+        }
+        background: @white;
+        .menu-icon {
+            transition: all .3s;
+        }
+        .rotate-icon {
+            transform: rotate(-180deg) !important;
+        }
+        .menu-item span {
+            display: inline-block;
+            overflow: hidden;
+            width: calc(100% - 50px);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: bottom;
+            transition: width .2s ease .2s;
+        }
+        .menu-item i {
+            transform: translateX(0px);
+            transition: font-size .2s ease, transform .2s ease;
+            vertical-align: middle;
+            font-size: 16px;
+        }
+        .collapsed-menu span {
+            width: 0px;
+            transition: width .2s ease;
+        }
+        .collapsed-menu i {
+            transform: translateX(5px);
+            transition: font-size .2s ease .2s, transform .2s ease .2s;
+            vertical-align: middle;
+            font-size: 22px;
+        }
+    }
+    .ivu-layout-content {
+        padding: 0 16px 16px;
+        .ivu-breadcrumb {
+            margin: 16px 0;
+            text-align: left;
+        }
+        .bottom-bar {
+            text-align: right;
+            margin-top: 30px;
+            user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+        }
+    }
+}
+.ivu-btn-small{
+    margin-right:5px;
+}
+
+/*对话框样式定义*/
+
+.ivu-modal {
+    .ivu-modal-header {
+        background: @light-primary;
+        .ivu-modal-header-inner {
+            color: @white;
+        }
+    }
+    .ivu-modal-close {
+        i {
+            color: @white;
+        }
+    }
+}
+
+.vertical-center-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ivu-modal {
+        top: 0;
+    }
+}
+
+.ivu-form-item-content {
+    min-height: 32px;
+    height: auto;
+}
+
+.ivu-btn.ivu-btn-loading {
+    //  pointer-events: auto;
+}
+
+.ivu-form-item /deep/ .ivu-form-item-content { //解决验证信息错误显示问题
+    height: auto;
+}
+// 面包屑后半部分文字颜色全局修改
+.ivu-breadcrumb>span:last-child{
+    color: #cccccc
+}
+// // 菜单点击后字体颜色全局修改
+// .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
+//     color:#0098CF
+// }
+// 按钮样式修改
+.ivu-btn-info{
+    background-color: #cccccc;
+    border-color: #cccccc;
+}
+
+/*覆盖时间日期选择器翻页箭头的颜色*/
+.ivu-picker-panel-icon-btn{
+  color: #010713;
+}
+
+// 覆盖输入框disabled之后的样式
+.ivu-input-wrapper .ivu-input-disabled{
+  color:#797979 !important;
+}
+.ivu-select-single .ivu-select-selection .ivu-select-selected-value{
+  color:#797979 !important;
+}
+
+// 首页公共样式
+.card-container .card-list:nth-child(1) .ivu-card{
+    background: #487EC1;
+    color:#fff;
+}
+.card-container .card-list:nth-child(2) .ivu-card{
+    background: #48B9C1;
+    color:#fff;
+}
+.card-container .card-list:nth-child(3) .ivu-card{
+    background: #A27DE2;
+    color:#fff;
+}
+.card-container .card-list:nth-child(4) .ivu-card{
+    background: #32C0D6;
+    color:#fff;
+}
+
+// 资源管理样式
+.form-control {
+  display: block;
+  width: 100%;
+  margin: 0;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control {
+  height: 32px;
+  border-radius: 0px;
+  padding: 6px;
+  -webkit-transition: none;
+  transition: none;
+  font-size: 12px;
+}
+.change-system {
+  margin-bottom: 12px;
+  width: 198px;
+}
+.change-system_tle {
+    float: left;
+    margin-top: 6px;
+}
+.resource_main .change-system {
+  width: calc(100% - 43px);
+  float: left;
+}
+.content {
+  width: 100%;
+  height: calc(100% - 25px);
+}
+.pull-left {
+  float: left !important;
+}
+.organ-list-tree {
+  width: 240px;
+  height: 100%;
+}
+.resource_main .organ-list-tree {
+  width: 100%;
+}
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+.panel-primary {
+  border-color: #337ab7;
+}
+.organ-list-tree .panel {
+  height: calc(100% - 20px);
+  border-radius: 0;
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-primary > .panel-heading {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+.organ-list-tree .panel-heading {
+  /* background: #D3E0F1; */
+  border-radius: 0;
+  padding: 12px 8px;
+}
+.panel-body {
+  padding: 15px;
+}
+.organ-list-tree .panel-body {
+  padding: 15px 0;
+  height: calc(100% - 45px);
+  overflow: auto;
+}
+.ztree {
+  margin: 0;
+  padding: 5px;
+  color: #333;
+  * {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+  }
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 14px;
+    text-align: left;
+    white-space: nowrap;
+    outline: 0;
+    span {
+      line-height: 16px;
+      margin-right: 2px;
+      .button {
+        line-height: 0;
+        margin: 0;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        border: 0 none;
+        cursor: pointer;
+        outline: none;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        // background-image: url(./img/zTreeStandard.png);
+        .ico_docu {
+          margin-right: 2px;
+          background-position: -110px -32px;
+          vertical-align: top;
+        }
+      }
+      .switch {
+        width: 18px;
+        height: 18px;
+      }
+      .root_docu {
+        background: none;
+      }
+    }
+    a {
+      padding: 1px 3px 0 0;
+      margin: 0;
+      cursor: pointer;
+      height: 17px;
+      color: #333;
+      background-color: transparent;
+      text-decoration: none;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}
