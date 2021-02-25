@@ -20,7 +20,6 @@ const WzRTC = function () {
     "iceServers": [
       {
         "url": "turn:" + location.hostname + ":3478",
-        // "url": "turn:" + "58.16.181.23" + ":3478",
         "username": "wz",
         "credential": "123456"
       }
