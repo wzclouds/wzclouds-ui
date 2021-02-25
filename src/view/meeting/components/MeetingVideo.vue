@@ -480,8 +480,6 @@ import hyUpload from '../../../components/hengyun/hyUpload';
         //   }
         // });
 
-        //连接WebSocket服务器
-        // rtc.connect("wss:" + "192.168.1.124:11011" +"/wss", vm.eleData);
         socketOK(function (){
           rtc.joinVideo(vm.eleData)
         });
